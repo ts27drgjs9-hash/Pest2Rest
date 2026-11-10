@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pest2Rest | Bug, Wasp & Bee Treatment</title>
+<meta name="description" content="Pest2Rest provides professional wasp, hornet and bee treatment and bug treatment for cockroaches, bed bugs, ants, mosquitoes and more. Servicing Melbourne’s east, north-east and south-east. Call or WhatsApp for a quote.">
+<meta name="theme-color" content="#0a1628">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1628'/%3E%3Ctext x='32' y='47' font-size='42' font-family='Georgia,serif' text-anchor='middle' fill='%23f5a623'%3E2%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<style>
+:root{
+  --night:#0a1628; --night-2:#12233f; --amber:#f5a623; --amber-2:#ffd27a; --ivory:#f4f1ea; --white:#fff;
+  --ink:#101a2b; --muted:#566178; --sage:#9fb0c9;
+  --gold:linear-gradient(135deg,#ffd27a,#f5a623 55%,#d98a0f);
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --hex:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23f5a623' stroke-opacity='.09'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='%23f5a623' stroke-opacity='.09'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:clip}
+body{overflow-x:hidden}
+body{font-family:var(--sans);color:var(--ink);background:var(--ivory);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{width:min(1160px,100% - 44px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;letter-spacing:-.01em}
+.btn{display:inline-block;padding:15px 30px;border-radius:999px;font-weight:700;font-size:.96rem;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-gold{background:var(--gold);color:var(--night);box-shadow:0 8px 24px rgba(245,166,35,.28)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(245,166,35,.42)}
+.btn-ghost{background:transparent;-webkit-appearance:none;appearance:none;border:1px solid rgba(255,210,122,.55);color:var(--amber-2)}
+.btn-ghost:hover{background:rgba(255,210,122,.1)}
+
+/* Wordmark with animated 2 */
+.p2r{display:inline-flex;align-items:baseline;font-family:var(--serif);color:var(--white);line-height:1;white-space:nowrap;text-decoration:none}
+.slot{position:relative;display:inline-block;margin:0 .03em}
+.two{display:inline-block;color:var(--amber);transform-origin:50% 60%}
+.spd{position:absolute;left:50%;top:50%;width:1.9em;height:1.58em;margin:-.79em 0 0 -.95em;opacity:0;pointer-events:none}
+.spd svg{display:block;width:100%;height:100%;overflow:visible}
+.run .spd{animation:crawl 6s ease-in-out both}
+.lg{animation:none}
+.run .lg.pa{animation:step .13s ease-in-out infinite alternate}
+.run .lg.pb{animation:step .13s ease-in-out infinite alternate-reverse}
+.flash,.ring{position:absolute;left:50%;top:50%;width:1.6em;height:1.6em;margin:-.8em 0 0 -.8em;border-radius:50%;pointer-events:none;opacity:0;scale:0}
+.flash{background:radial-gradient(circle,#fff 0,#fff3c4 26%,rgba(245,166,35,.55) 48%,transparent 70%)}
+.ring{border:.04em solid var(--amber-2)}
+.run .flash{animation:boom 6s ease-out both}
+.run .ring{animation:ringo 6s ease-out both}
+.run .two{animation:pop 6s ease-out both}
+
+@keyframes step{from{rotate:-9deg}to{rotate:9deg}}
+@keyframes crawl{
+  0%{opacity:1;transform:translate(105vw,.02em)}
+  30%{transform:translate(55vw,-.02em)}
+  36%{transform:translate(52vw,0)}
+  52%{transform:translate(22vw,.03em)}
+  57%{transform:translate(20vw,0)}
+  70%{opacity:1;transform:translate(0,0) scale(1);filter:none}
+  72%{opacity:1;transform:translate(0,0) scale(1.1);filter:brightness(4)}
+  76%{opacity:.9;transform:translate(-.04em,.04em) scale(.68) rotate(-18deg);filter:brightness(.6)}
+  86%,100%{opacity:0;transform:translate(-.06em,.08em) scale(.25) rotate(-40deg)}
+}
+@keyframes boom{0%,71%{opacity:0;scale:0}74%{opacity:1;scale:1}90%,100%{opacity:0;scale:1.9}}
+@keyframes ringo{0%,72%{opacity:0;scale:.2}76%{opacity:.9}94%,100%{opacity:0;scale:2.5}}
+@keyframes pop{0%,73%{opacity:0;scale:.2}80%{opacity:1;scale:1.4;text-shadow:0 0 .45em #ffd27a}90%{scale:1}100%{opacity:1;scale:1;text-shadow:none}}
+
+/* Header */
+header{position:fixed;inset:0 0 auto 0;z-index:30;background:rgba(10,22,40,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(245,166,35,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+header .p2r{font-size:1.9rem}
+.links{display:flex;align-items:center;gap:32px}
+.links a{color:var(--sage);text-decoration:none;font-size:.95rem;font-weight:500;transition:color .2s}
+.links a:hover{color:var(--white)}
+.links .btn{padding:11px 22px}
+
+/* Hero */
+.hero{background:radial-gradient(70% 90% at 85% 40%,rgba(245,166,35,.18),transparent 70%),var(--hex),linear-gradient(160deg,var(--night),var(--night-2));color:var(--white);padding:170px 0 104px}
+.hero .p2r{font-size:clamp(3.8rem,13vw,9.5rem);margin-bottom:26px}
+.hero h1{font-size:clamp(1.9rem,4vw,3rem);max-width:22ch;margin-bottom:20px;color:#fff3d6}
+.hero p{color:#b9c6dc;max-width:50ch;font-size:1.12rem;margin-bottom:38px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.facts{display:flex;flex-wrap:wrap;margin-top:64px;border-top:1px solid rgba(245,166,35,.3)}
+.facts div{flex:1 1 220px;padding:22px 24px 0 0;color:var(--sage);font-size:.95rem}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:1.5rem;color:var(--amber-2);margin-bottom:2px}
+
+/* Sections */
+section{padding:108px 0}
+.head{max-width:640px;margin-bottom:52px}
+.head h2{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:14px}
+.head p{color:var(--muted)}
+main>section{position:relative;z-index:2;border-radius:36px 36px 0 0;margin-top:-36px;box-shadow:0 -24px 60px -20px rgba(10,22,40,.35)}
+
+/* Services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--white);border-radius:22px;padding:34px 30px;border-top:3px solid var(--amber);box-shadow:0 20px 40px -28px rgba(10,22,40,.4);display:flex;flex-direction:column;align-items:flex-start}
+.card h3{font-size:1.9rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem;margin-bottom:22px;flex:1}
+.card a{color:#a8680a;font-weight:700;text-decoration:none;font-size:.95rem}
+.card a:hover{text-decoration:underline}
+.feature{grid-column:1/-1;display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;background:linear-gradient(160deg,var(--night),var(--night-2));color:var(--white);border:0;padding:52px 48px;position:relative;overflow:hidden}
+.feature::before{content:"";position:absolute;inset:0;background:var(--hex);opacity:.9;pointer-events:none}
+.feature>*{position:relative}
+.feature h3{font-size:clamp(2.2rem,4.5vw,3.3rem);font-weight:400;color:#fff3d6}
+.feature p{color:#b9c6dc;flex:none;font-size:1.02rem}
+.feature ul{list-style:none;display:grid;gap:12px;margin-bottom:28px;color:#dbe5f5;font-size:.97rem}
+.feature li::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:13px;vertical-align:middle}
+.warn{margin-top:4px;padding:18px 20px;border-radius:14px;background:rgba(245,166,35,.12);border:1px solid rgba(245,166,35,.35);color:#ffe9b8;font-size:.92rem}
+.card.cta-card{background:var(--night);color:var(--white);grid-column:1/-1;flex-direction:row;align-items:center;flex-wrap:wrap;gap:14px 36px;padding:32px 36px}
+.card.cta-card h3{margin:0}
+.card.cta-card p{flex:1 1 300px;margin:0}
+.card.cta-card p{color:#b9c6dc}
+.card.cta-card a{color:var(--amber-2)}
+
+/* Steps */
+.how{background:var(--white)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:52px}
+.step{border-top:1px solid rgba(217,138,15,.55);padding-top:26px}
+.step b{display:block;font-family:var(--serif);font-weight:400;font-size:4.2rem;line-height:1;margin-bottom:12px;background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:1.7rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.98rem}
+
+/* Areas */
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+.areas h3{font-size:1.7rem;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid rgba(217,138,15,.55)}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.chips li{padding:9px 18px;border:1px solid rgba(16,26,43,.16);border-radius:999px;background:var(--white);font-size:.93rem;font-weight:500;transition:border-color .2s,transform .2s}
+.chips li:hover{border-color:var(--amber);transform:translateY(-2px)}
+
+/* Contact */
+.contact{background:var(--hex),linear-gradient(160deg,var(--night),var(--night-2));color:var(--white)}
+.contact-grid{display:grid;grid-template-columns:5fr 6fr;gap:70px;align-items:start}
+.contact h2{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:14px}
+.lead{color:#b9c6dc;margin-bottom:36px;max-width:38ch}
+.reach{display:grid;gap:22px}
+.reach div{border-top:1px solid rgba(245,166,35,.3);padding-top:16px}
+.reach small{display:block;color:var(--sage);font-size:.85rem;margin-bottom:2px}
+.reach a,.reach span{font-size:1.45rem;font-family:var(--serif);text-decoration:none}
+.reach a:hover{color:var(--amber-2)}
+form{background:var(--ivory);color:var(--ink);border-radius:24px;padding:36px;display:grid;grid-template-columns:1fr 1fr;gap:18px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.field{display:grid;gap:6px}.field.full{grid-column:1/-1}
+label{font-size:.88rem;font-weight:600}
+input,select,textarea{width:100%;font:inherit;padding:14px 15px;border:1px solid #d6d9e0;border-radius:12px;background:var(--white);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(245,166,35,.45);border-color:#d98a0f}
+textarea{min-height:96px;resize:vertical}
+form .btn{grid-column:1/-1;justify-self:start}
+.note{grid-column:1/-1;font-size:.82rem;color:var(--muted)}
+footer{background:#060f1d;color:#8493ad;padding:34px 0;font-size:.88rem;border-top:1px solid rgba(245,166,35,.2)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .p2r{font-size:1.5rem}
+.callbar{display:none}
+
+html.js .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+html.js .reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .areas-grid{grid-template-columns:1fr;gap:40px}
+  .svc,.steps,.contact-grid,.feature{grid-template-columns:1fr}
+  .feature{padding:36px 26px;gap:26px}.steps{gap:34px}.contact-grid{gap:44px}
+  .links a:not(.btn){display:none}.links .btn{display:none}
+  section{padding:74px 0}.hero{padding:128px 0 76px}
+  form{grid-template-columns:1fr;padding:24px}
+  .callbar{display:flex;gap:10px;position:fixed;inset:auto 0 0 0;z-index:40;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(10,22,40,.96);border-top:1px solid rgba(245,166,35,.3)}
+  .callbar .btn{flex:1;text-align:center;padding:14px}
+  body{padding-bottom:72px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}html.js .reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Pest2Rest", "url": "https://pest2rest.com.au", "telephone": "+61401042325", "email": "info@pest2rest.com.au", "description": "Wasp, bee and bug treatment in Melbourne’s east, north-east and south-east.", "areaServed": ["Hawthorn, Victoria", "Camberwell, Victoria", "Canterbury, Victoria", "Surrey Hills, Victoria", "Balwyn, Victoria", "Box Hill, Victoria", "Blackburn, Victoria", "Burwood, Victoria", "Doncaster, Victoria", "Templestowe, Victoria", "Nunawading, Victoria", "Mitcham, Victoria", "Vermont, Victoria", "Forest Hill, Victoria", "Ringwood, Victoria", "Glen Waverley, Victoria", "Mount Waverley, Victoria", "Croydon, Victoria", "Ivanhoe, Victoria", "Heidelberg, Victoria", "Rosanna, Victoria", "Macleod, Victoria", "Watsonia, Victoria", "Viewbank, Victoria", "Briar Hill, Victoria", "Eltham, Victoria", "Lower Plenty, Victoria", "Montmorency, Victoria", "Greensborough, Victoria", "Diamond Creek, Victoria", "Bundoora, Victoria", "Mill Park, Victoria", "Malvern East, Victoria", "Chadstone, Victoria", "Oakleigh, Victoria", "Clayton, Victoria", "Mulgrave, Victoria", "Wheelers Hill, Victoria", "Springvale, Victoria", "Noble Park, Victoria", "Dandenong, Victoria", "Keysborough, Victoria", "Bentleigh, Victoria", "Moorabbin, Victoria", "Cheltenham, Victoria", "Mentone, Victoria", "Narre Warren, Victoria", "Berwick, Victoria"]}</script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="p2r" href="#top" aria-label="Pest2Rest home"><span aria-hidden="true">Pest</span><span class="slot" aria-hidden="true"><b class="two">2</b><span class="spd"><svg viewBox="0 0 72 60" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g class="lg pa" style="transform-origin:26px 26px"><path d="M26 26L15 12L5 14" stroke="#4a5570" stroke-width="3.6"/><path d="M26 26L15 12L5 14" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:26px 34px"><path d="M26 34L15 48L5 46" stroke="#4a5570" stroke-width="3.6"/><path d="M26 34L15 48L5 46" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:29px 25px"><path d="M29 25L21 7L12 4" stroke="#4a5570" stroke-width="3.6"/><path d="M29 25L21 7L12 4" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pa" style="transform-origin:29px 35px"><path d="M29 35L21 53L12 56" stroke="#4a5570" stroke-width="3.6"/><path d="M29 35L21 53L12 56" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pa" style="transform-origin:33px 25px"><path d="M33 25L36 7L46 5" stroke="#4a5570" stroke-width="3.6"/><path d="M33 25L36 7L46 5" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:33px 35px"><path d="M33 35L36 53L46 55" stroke="#4a5570" stroke-width="3.6"/><path d="M33 35L36 53L46 55" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:37px 27px"><path d="M37 27L52 11L66 12" stroke="#4a5570" stroke-width="3.6"/><path d="M37 27L52 11L66 12" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pa" style="transform-origin:37px 33px"><path d="M37 33L52 49L66 48" stroke="#4a5570" stroke-width="3.6"/><path d="M37 33L52 49L66 48" stroke="#08080b" stroke-width="2.1"/></g></g><ellipse cx="50" cy="30" rx="14.5" ry="11.5" fill="#050507" stroke="#4a5570" stroke-width=".9"/><ellipse cx="47" cy="25.5" rx="8" ry="3.6" fill="#fff" fill-opacity=".09"/><ellipse cx="31" cy="30" rx="9.5" ry="8" fill="#08080b" stroke="#4a5570" stroke-width=".9"/><ellipse cx="29" cy="27" rx="4.5" ry="2.4" fill="#fff" fill-opacity=".08"/><g fill="#c3cbe0"><circle cx="23.6" cy="28" r=".95"/><circle cx="23.6" cy="32" r=".95"/><circle cx="25.4" cy="25.8" r=".8"/><circle cx="25.4" cy="34.2" r=".8"/></g><g stroke="#4a5570" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M22 28.4L17 27M22 31.6L17 33"/></g></svg></span><i class="flash"></i><i class="ring"></i></span><span aria-hidden="true">Rest</span></a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-gold" href="#" data-tel>Call now</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div class="p2r" role="img" aria-label="Pest2Rest"><span aria-hidden="true">Pest</span><span class="slot" aria-hidden="true"><b class="two">2</b><span class="spd"><svg viewBox="0 0 72 60" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g class="lg pa" style="transform-origin:26px 26px"><path d="M26 26L15 12L5 14" stroke="#4a5570" stroke-width="3.6"/><path d="M26 26L15 12L5 14" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:26px 34px"><path d="M26 34L15 48L5 46" stroke="#4a5570" stroke-width="3.6"/><path d="M26 34L15 48L5 46" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:29px 25px"><path d="M29 25L21 7L12 4" stroke="#4a5570" stroke-width="3.6"/><path d="M29 25L21 7L12 4" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pa" style="transform-origin:29px 35px"><path d="M29 35L21 53L12 56" stroke="#4a5570" stroke-width="3.6"/><path d="M29 35L21 53L12 56" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pa" style="transform-origin:33px 25px"><path d="M33 25L36 7L46 5" stroke="#4a5570" stroke-width="3.6"/><path d="M33 25L36 7L46 5" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:33px 35px"><path d="M33 35L36 53L46 55" stroke="#4a5570" stroke-width="3.6"/><path d="M33 35L36 53L46 55" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:37px 27px"><path d="M37 27L52 11L66 12" stroke="#4a5570" stroke-width="3.6"/><path d="M37 27L52 11L66 12" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pa" style="transform-origin:37px 33px"><path d="M37 33L52 49L66 48" stroke="#4a5570" stroke-width="3.6"/><path d="M37 33L52 49L66 48" stroke="#08080b" stroke-width="2.1"/></g></g><ellipse cx="50" cy="30" rx="14.5" ry="11.5" fill="#050507" stroke="#4a5570" stroke-width=".9"/><ellipse cx="47" cy="25.5" rx="8" ry="3.6" fill="#fff" fill-opacity=".09"/><ellipse cx="31" cy="30" rx="9.5" ry="8" fill="#08080b" stroke="#4a5570" stroke-width=".9"/><ellipse cx="29" cy="27" rx="4.5" ry="2.4" fill="#fff" fill-opacity=".08"/><g fill="#c3cbe0"><circle cx="23.6" cy="28" r=".95"/><circle cx="23.6" cy="32" r=".95"/><circle cx="25.4" cy="25.8" r=".8"/><circle cx="25.4" cy="34.2" r=".8"/></g><g stroke="#4a5570" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M22 28.4L17 27M22 31.6L17 33"/></g></svg></span><i class="flash"></i><i class="ring"></i></span><span aria-hidden="true">Rest</span></div>
+      <h1>Professional bug, wasp and bee treatment for your home and business.</h1>
+      <p>From wasp nests and bees to cockroaches, bed bugs and ants, tell us what you’re seeing and we’ll talk you through the right treatment.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#" data-tel>Call <span data-phone>…</span></a>
+        <a class="btn btn-ghost" href="#contact">Request a quote</a>
+      </div>
+      <div class="facts">
+        <div><b>Wasps, hornets and bees</b>Nests and swarms</div>
+        <div><b>Crawling bugs</b>Cockroaches, bed bugs, ants</div>
+        <div><b>Homes and businesses</b>Residential and commercial</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head reveal"><h2>What we treat</h2><p>Choose the problem that matches yours and we’ll take it from there.</p></div>
+      <div class="svc">
+        <div class="card feature reveal">
+          <div>
+            <h3>Wasps and hornets</h3>
+            <p>Nests near doors, roofs, balconies and gardens are a real risk, especially to children and people with allergies. We deal with them so you don’t have to.</p>
+            <a class="btn btn-gold" href="#contact" data-service="Wasps / hornets">Enquire about wasps</a>
+          </div>
+          <div>
+            <ul><li>Nest inspection and identification</li><li>Safe removal and treatment of the nest</li><li>Advice to help stop new nests forming</li></ul>
+            <div class="warn">Don’t try to remove a nest yourself. Keep children and pets away from it and call us.</div>
+          </div>
+        </div>
+        <div class="card reveal"><h3>Bees</h3><p>Bee swarms and hives in walls, roofs and gardens. Bees are important pollinators, so we’ll advise on the safest option for you and the bees.</p><a href="#contact" data-service="Bees">Enquire</a></div>
+        <div class="card reveal" style="--d:.1s"><h3>Cockroaches</h3><p>Kitchens, bathrooms, drains and storerooms in homes, restaurants and offices.</p><a href="#contact" data-service="Cockroaches">Enquire</a></div>
+        <div class="card reveal" style="--d:.2s"><h3>Bed bugs</h3><p>Treatment for bedrooms, mattresses, furniture and cracks where bed bugs hide.</p><a href="#contact" data-service="Bed bugs">Enquire</a></div>
+        <div class="card reveal"><h3>Ants</h3><p>Finding the trail and the nest so the ants are dealt with at the source.</p><a href="#contact" data-service="Ants">Enquire</a></div>
+        <div class="card reveal" style="--d:.1s"><h3>Mosquitoes and flies</h3><p>Treatment for indoor and outdoor areas where mosquitoes and flies gather.</p><a href="#contact" data-service="Mosquitoes / flies">Enquire</a></div>
+        <div class="card reveal" style="--d:.2s"><h3>Spiders and other bugs</h3><p>Spiders, silverfish, fleas and other insects that have moved into your space.</p><a href="#contact" data-service="Spiders / other bugs">Enquire</a></div>
+        <div class="card cta-card reveal" style="--d:.2s"><h3>Not sure what it is?</h3><p>Describe it or send a photo on WhatsApp and we’ll help work it out.</p><a href="#contact" data-service="Not sure">Ask us</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="wrap">
+      <div class="head reveal"><h2>How it works</h2><p>Three simple steps, and no work starts until you’re happy.</p></div>
+      <div class="steps">
+        <div class="step reveal"><b>1</b><h3>Tell us the problem</h3><p>Call, WhatsApp or use the form. Photos help us understand what we’re dealing with.</p></div>
+        <div class="step reveal" style="--d:.12s"><b>2</b><h3>We inspect and advise</h3><p>We confirm the pest, where it’s coming from and the right treatment for your property.</p></div>
+        <div class="step reveal" style="--d:.24s"><b>3</b><h3>Treatment is carried out</h3><p>We agree the quote and timing with you first, then carry out the treatment.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="areas" id="areas">
+    <div class="wrap">
+      <div class="head reveal"><h2>Areas we cover</h2><p>We work mainly across Melbourne’s east, north-east and south-east. Not on the list? Call us and we’ll let you know if we can help.</p></div>
+      <div class="areas-grid">
+        <div class="reveal"><h3>Eastern suburbs</h3><ul class="chips"><li>Hawthorn</li><li>Camberwell</li><li>Canterbury</li><li>Surrey Hills</li><li>Balwyn</li><li>Box Hill</li><li>Blackburn</li><li>Burwood</li><li>Doncaster</li><li>Templestowe</li><li>Nunawading</li><li>Mitcham</li><li>Vermont</li><li>Forest Hill</li><li>Ringwood</li><li>Glen Waverley</li><li>Mount Waverley</li><li>Croydon</li></ul></div>
+        <div class="reveal" style="--d:.15s"><h3>North-eastern suburbs</h3><ul class="chips"><li>Ivanhoe</li><li>Heidelberg</li><li>Rosanna</li><li>Macleod</li><li>Watsonia</li><li>Viewbank</li><li>Briar Hill</li><li>Eltham</li><li>Lower Plenty</li><li>Montmorency</li><li>Greensborough</li><li>Diamond Creek</li><li>Bundoora</li><li>Mill Park</li></ul></div>
+        <div class="reveal" style="--d:.3s"><h3>South-eastern suburbs</h3><ul class="chips"><li>Malvern East</li><li>Chadstone</li><li>Oakleigh</li><li>Clayton</li><li>Mulgrave</li><li>Wheelers Hill</li><li>Springvale</li><li>Noble Park</li><li>Dandenong</li><li>Keysborough</li><li>Bentleigh</li><li>Moorabbin</li><li>Cheltenham</li><li>Mentone</li><li>Narre Warren</li><li>Berwick</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <h2>Get a free quote</h2>
+        <p class="lead">Call or message us, or send the form and it will open in WhatsApp.</p>
+        <div class="reach">
+          <div><small>Phone</small><a href="#" data-tel><span data-phone>…</span></a></div>
+          <div><small>WhatsApp</small><a href="#" data-wa target="_blank" rel="noopener">Message us</a></div>
+          <div><small>Email</small><a href="#" data-email>…</a></div>
+          <div><small>Service area</small><span data-city>…</span></div>
+        </div>
+      </div>
+      <form id="quoteForm" class="reveal" style="--d:.15s">
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="area">Area / address</label><input id="area" name="area" required></div>
+        <div class="field"><label for="service">What do you need help with?</label>
+          <select id="service" name="service" required><option value="">Choose a service</option><option>Wasps / hornets</option><option>Bees</option><option>Cockroaches</option><option>Bed bugs</option><option>Ants</option><option>Mosquitoes / flies</option><option>Spiders / other bugs</option><option>Not sure</option></select></div>
+        <div class="field full"><label for="message">Tell us a little more (optional)</label><textarea id="message" name="message"></textarea></div>
+        <button class="btn btn-gold" type="submit">Send on WhatsApp</button>
+        <p class="note">This opens WhatsApp with your message ready. Press send to finish.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="p2r" role="img" aria-label="Pest2Rest"><span aria-hidden="true">Pest</span><span class="slot" aria-hidden="true"><b class="two">2</b><span class="spd"><svg viewBox="0 0 72 60" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><g class="lg pa" style="transform-origin:26px 26px"><path d="M26 26L15 12L5 14" stroke="#4a5570" stroke-width="3.6"/><path d="M26 26L15 12L5 14" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:26px 34px"><path d="M26 34L15 48L5 46" stroke="#4a5570" stroke-width="3.6"/><path d="M26 34L15 48L5 46" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:29px 25px"><path d="M29 25L21 7L12 4" stroke="#4a5570" stroke-width="3.6"/><path d="M29 25L21 7L12 4" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pa" style="transform-origin:29px 35px"><path d="M29 35L21 53L12 56" stroke="#4a5570" stroke-width="3.6"/><path d="M29 35L21 53L12 56" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pa" style="transform-origin:33px 25px"><path d="M33 25L36 7L46 5" stroke="#4a5570" stroke-width="3.6"/><path d="M33 25L36 7L46 5" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:33px 35px"><path d="M33 35L36 53L46 55" stroke="#4a5570" stroke-width="3.6"/><path d="M33 35L36 53L46 55" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pb" style="transform-origin:37px 27px"><path d="M37 27L52 11L66 12" stroke="#4a5570" stroke-width="3.6"/><path d="M37 27L52 11L66 12" stroke="#08080b" stroke-width="2.1"/></g><g class="lg pa" style="transform-origin:37px 33px"><path d="M37 33L52 49L66 48" stroke="#4a5570" stroke-width="3.6"/><path d="M37 33L52 49L66 48" stroke="#08080b" stroke-width="2.1"/></g></g><ellipse cx="50" cy="30" rx="14.5" ry="11.5" fill="#050507" stroke="#4a5570" stroke-width=".9"/><ellipse cx="47" cy="25.5" rx="8" ry="3.6" fill="#fff" fill-opacity=".09"/><ellipse cx="31" cy="30" rx="9.5" ry="8" fill="#08080b" stroke="#4a5570" stroke-width=".9"/><ellipse cx="29" cy="27" rx="4.5" ry="2.4" fill="#fff" fill-opacity=".08"/><g fill="#c3cbe0"><circle cx="23.6" cy="28" r=".95"/><circle cx="23.6" cy="32" r=".95"/><circle cx="25.4" cy="25.8" r=".8"/><circle cx="25.4" cy="34.2" r=".8"/></g><g stroke="#4a5570" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M22 28.4L17 27M22 31.6L17 33"/></g></svg></span><i class="flash"></i><i class="ring"></i></span><span aria-hidden="true">Rest</span></div>
+    <span>© <span id="year"></span> Pest2Rest. Bug, wasp and bee treatment.</span>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn btn-gold" href="#" data-tel>Call now</a><a class="btn btn-ghost" href="#" data-wa target="_blank" rel="noopener">WhatsApp</a></div>
+
+<script>
+/* EDIT THESE DETAILS */
+var CONFIG={
+  phoneDisplay:'+61 401 042 325',
+  phoneTel:'+61401042325',
+  whatsapp:'61401042325',   /* country code + number, no + or spaces */
+  email:'info@pest2rest.com.au',
+  city:'Melbourne’s east, north-east and south-east'
+};
+document.getElementById('year').textContent=new Date().getFullYear();
+document.querySelectorAll('[data-phone]').forEach(function(e){e.textContent=CONFIG.phoneDisplay;});
+document.querySelectorAll('[data-tel]').forEach(function(e){e.href='tel:'+CONFIG.phoneTel;});
+document.querySelectorAll('[data-wa]').forEach(function(e){e.href='https://wa.me/'+CONFIG.whatsapp;});
+document.querySelectorAll('[data-email]').forEach(function(e){e.href='mailto:'+CONFIG.email;e.textContent=CONFIG.email;});
+document.querySelectorAll('[data-city]').forEach(function(e){e.textContent=CONFIG.city;});
+document.querySelectorAll('[data-service]').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('service').value=a.dataset.service;});
+});
+document.getElementById('quoteForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(this);
+  var text='Hello Pest2Rest, I would like a quote.\n\nName: '+d.get('name')+'\nPhone: '+d.get('phone')+'\nArea: '+d.get('area')+'\nService: '+d.get('service')+'\nDetails: '+(d.get('message')||'Not provided');
+  window.open('https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(text),'_blank');
+});
+/* Animated 2: wasp arrives, gets zapped by a flash, becomes a 2 */
+var marks=document.querySelectorAll('.p2r'),reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function play(){marks.forEach(function(m){m.classList.remove('run');void m.offsetWidth;m.classList.add('run');});}
+if(!reduce){
+  (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(function(){play();setInterval(play,12500);});
+  marks.forEach(function(m){m.addEventListener('pointerenter',play);});
+}
+/* Scroll reveal */
+var items=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});},{threshold:.15});
+  items.forEach(function(el){io.observe(el);});
+}else{items.forEach(function(el){el.classList.add('in');});}
+</script>
+</body>
+</html>

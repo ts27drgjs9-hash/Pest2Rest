@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pest2Rest | Bug, Wasp, Bee, Possum & Rodent Treatment</title>
+<meta name="description" content="Pest2Rest provides wasp, hornet, bee, white-tailed spider, cockroach, bed bug, ant, mosquito, possum and rodent treatment across Melbourne’s east, north-east and south-east.">
+<meta name="theme-color" content="#0a1628">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1628'/%3E%3Ctext x='32' y='47' font-size='42' font-family='Georgia,serif' text-anchor='middle' fill='%23f5a623'%3E2%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0a1628;--night-2:#12233f;--amber:#f5a623;--amber-2:#ffd27a;--ivory:#f4f1ea;--white:#fff;--ink:#101a2b;--muted:#566178;--sage:#9fb0c9;--gold:linear-gradient(135deg,#ffd27a,#f5a623 55%,#d98a0f);--serif:"Instrument Serif",Georgia,serif;--sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px;overflow-x:clip}
+body{font-family:var(--sans);color:var(--ink);background:var(--ivory);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:.95rem;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn-gold{background:var(--gold);color:var(--night);box-shadow:0 8px 22px rgba(245,166,35,.28)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,210,122,.55);color:var(--amber-2)}
+
+/* Animated wordmark: a white-tailed spider scuttles in, gets sprayed and becomes the 2 */
+.p2r{display:inline-flex;align-items:baseline;font-family:var(--serif);color:var(--white);line-height:1;white-space:nowrap;text-decoration:none}
+.slot{position:relative;display:inline-block;margin:0 .03em}
+.two{display:inline-block;color:var(--amber);transform-origin:50% 60%}
+.spd{position:absolute;left:50%;top:50%;width:2.2em;height:1.15em;margin:-.575em 0 0 -1.1em;opacity:0;pointer-events:none}
+.spd svg{display:block;width:100%;height:100%;overflow:visible}
+.lg{transform-box:fill-box;transform-origin:center}
+.run .spd{animation:crawl 6s ease-in-out both}
+.run .lg.pa{animation:step .1s ease-in-out infinite alternate}
+.run .lg.pb{animation:step .1s ease-in-out infinite alternate-reverse}
+.flash,.ring{position:absolute;left:50%;top:50%;margin:0;pointer-events:none;opacity:0;scale:0}
+.flash{width:2.5em;height:2.5em;margin:-1.25em 0 0 -1.25em;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.7) 0,rgba(170,215,255,.4) 35%,transparent 60%)}
+.ring{width:2.2em;height:2.2em;margin:-1.1em 0 0 -1.1em;border-radius:50%;border:2px solid rgba(230,244,255,.6)}
+.run .flash{animation:boom 6s ease-out both}
+.run .ring{animation:ringo 6s ease-out both}
+.run .two{animation:pop 6s ease-out both}
+@keyframes crawl{0%{opacity:1;transform:translate(105vw,0)}46%{transform:translate(28vw,0)}50%{transform:translate(26vw,0)}70%{opacity:1;transform:translate(0,0)}75%{transform:translate(-.03em,.02em) rotate(8deg);filter:saturate(.5) brightness(.8)}78%{opacity:1;transform:translate(0,.03em) rotate(180deg) scale(.95)}85%,100%{opacity:0;transform:translate(0,.05em) rotate(180deg) scale(.7)}}
+@keyframes boom{0%,71%{opacity:0;scale:0}74%{opacity:1;scale:.85}92%{opacity:.5;scale:1.15}100%{opacity:0;scale:1.3}}
+@keyframes ringo{0%,72%{opacity:0;scale:.3}75%{opacity:1;scale:.8}96%,100%{opacity:0;scale:1.7}}
+@keyframes pop{0%,78%{opacity:0;scale:.2}85%{opacity:1;scale:1.4;text-shadow:0 0 .45em #ffd27a}93%{scale:1}100%{opacity:1;scale:1;text-shadow:none}}
+@keyframes step{from{rotate:-9deg}to{rotate:9deg}}
+
+/* Header and menu */
+header{position:fixed;inset:0 0 auto 0;z-index:40;background:rgba(10,22,40,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(245,166,35,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+header .p2r{font-size:1.8rem}
+.links{display:flex;align-items:center;gap:26px}
+.links a{color:var(--sage);text-decoration:none;font-size:.93rem;font-weight:500}
+.links a:hover{color:var(--white)}
+.links .btn{padding:10px 20px}
+.menu-btn{display:none;background:transparent;border:1px solid rgba(255,210,122,.55);color:var(--amber-2);border-radius:999px;padding:9px 18px;font:inherit;font-weight:600;cursor:pointer}
+
+/* Promo bar */
+.promo{background:var(--gold);color:var(--night);margin-top:68px;padding:10px 0;font-weight:700;font-size:.92rem;text-align:center}
+.promo span{display:inline-block;margin:2px 14px}
+
+/* Hero */
+.hero{background:radial-gradient(70% 90% at 85% 40%,rgba(245,166,35,.18),transparent 70%),linear-gradient(160deg,var(--night),var(--night-2));color:var(--white);padding:70px 0 56px}
+.hero h1{font-size:clamp(2rem,4.2vw,3.2rem);max-width:22ch;margin-bottom:14px;color:#fff3d6}
+.hero p{color:#b9c6dc;max-width:56ch;margin-bottom:26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;margin-top:36px;border-top:1px solid rgba(245,166,35,.3)}
+.facts div{flex:1 1 200px;padding:16px 20px 0 0;color:var(--sage);font-size:.92rem}
+.facts b{display:block;font-family:var(--serif);font-weight:400;font-size:1.35rem;color:var(--amber-2)}
+
+/* Sections: tight spacing */
+section{padding:56px 0;scroll-margin-top:90px}
+.head{max-width:680px;margin-bottom:26px}
+.head h2{font-size:clamp(2rem,4.5vw,2.9rem);margin-bottom:8px}
+.head p{color:var(--muted)}
+.alt{background:var(--white)}
+.dark{background:linear-gradient(160deg,var(--night),var(--night-2));color:var(--white)}
+.dark .head p,.dark p{color:#b9c6dc}
+
+/* Cards and grids */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--white);border-radius:18px;padding:26px;border-top:3px solid var(--amber);box-shadow:0 14px 30px -24px rgba(10,22,40,.4)}
+.card h3{font-size:1.6rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.card a{color:#a8680a;font-weight:700;text-decoration:none;font-size:.93rem}
+.card a:hover{text-decoration:underline}
+.card ul{margin:0 0 12px 18px;color:var(--muted);font-size:.93rem}
+.price{font-family:var(--serif);font-size:2.6rem;color:#a8680a;line-height:1}
+.price small{font-family:var(--sans);font-size:.9rem;color:var(--muted)}
+.warn{margin-top:10px;padding:12px 14px;border-radius:12px;background:#fff4dc;color:#6b4300;font-size:.9rem}
+.wide{grid-column:1/-1}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.step{border-top:1px solid rgba(217,138,15,.55);padding-top:18px}
+.step b{display:block;font-family:var(--serif);font-weight:400;font-size:3rem;line-height:1;margin-bottom:8px;background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:1.5rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* Areas */
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.areas h3{font-size:1.4rem;margin-bottom:12px}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{padding:6px 14px;border:1px solid rgba(16,26,43,.16);border-radius:999px;background:var(--white);font-size:.88rem}
+
+/* FAQs */
+.faq{max-width:840px}
+details{background:var(--white);border-radius:14px;margin-bottom:10px;border:1px solid rgba(16,26,43,.08)}
+summary{cursor:pointer;list-style:none;padding:16px 50px 16px 20px;font-weight:600;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:20px;top:12px;font-size:1.4rem;color:#a8680a}
+details[open] summary::after{content:"–"}
+details p{padding:0 20px 18px;color:var(--muted);font-size:.95rem}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:5fr 6fr;gap:44px;align-items:start}
+.contact h2{font-size:clamp(2rem,4.5vw,2.9rem);margin-bottom:8px}
+.reach{display:grid;gap:16px;margin-top:22px}
+.reach div{border-top:1px solid rgba(245,166,35,.3);padding-top:12px}
+.reach small{display:block;color:var(--sage);font-size:.84rem}
+.reach a,.reach span{font-size:1.3rem;font-family:var(--serif);text-decoration:none}
+form{background:var(--ivory);color:var(--ink);border-radius:22px;padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:14px;box-shadow:0 30px 60px -28px rgba(0,0,0,.6)}
+.field{display:grid;gap:5px}.field.full{grid-column:1/-1}
+label{font-size:.87rem;font-weight:600}
+input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid #d6d9e0;border-radius:12px;background:var(--white);color:var(--ink)}
+textarea{min-height:84px;resize:vertical}
+form .btn{grid-column:1/-1;justify-self:start}
+.note{grid-column:1/-1;font-size:.82rem;color:var(--muted)}
+footer{background:#060f1d;color:#8493ad;padding:26px 0;font-size:.88rem}
+.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+footer .p2r{font-size:1.4rem}
+.callbar{display:none}
+
+/* Mobile */
+@media (max-width:860px){
+  .menu-btn{display:inline-block}
+  .links{position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--night);border-bottom:1px solid rgba(245,166,35,.25);display:none;padding:8px 20px 16px}
+  .links.open{display:flex}
+  .links a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+  .links .btn{text-align:center;margin-top:10px;border:0}
+  .grid,.two-col,.steps,.areas-grid,.contact-grid{grid-template-columns:1fr}
+  .card.wide{grid-column:auto}
+  .promo span{display:block;margin:2px 0}
+  .callbar{display:flex;gap:10px;position:fixed;bottom:0;left:0;right:0;z-index:50;padding:10px;background:var(--night);border-top:1px solid rgba(245,166,35,.3)}
+  .callbar .btn{flex:1;text-align:center;padding:12px}
+  body{padding-bottom:70px}
+  form{grid-template-columns:1fr}
+}
+/* Larger text for easier reading */
+body{font-size:20px;line-height:1.7}
+.hero h1{font-size:clamp(2.5rem,5.5vw,3.8rem)}
+.hero p{font-size:1.3rem}
+.head h2,.contact h2{font-size:clamp(2.6rem,5.5vw,3.6rem)}
+.head p,.card p,.step p,.lead{font-size:1.2rem}
+.card h3{font-size:2.2rem}
+.card ul,.card a{font-size:1.15rem}
+.card a{display:inline-block;padding:6px 0}
+.step h3{font-size:2rem}
+.step b{font-size:3.6rem}
+.areas h3{font-size:2rem}
+.chips li{font-size:1.1rem;padding:8px 16px}
+.btn{font-size:1.2rem;padding:17px 32px}
+.links a{font-size:1.2rem}
+.menu-btn{font-size:1.2rem;padding:10px 20px}
+.promo{font-size:1.25rem}
+.facts div{font-size:1.2rem}
+.facts b{font-size:1.8rem}
+.price{font-size:3.2rem}
+.warn{font-size:1.15rem}
+summary{font-size:1.35rem;padding:20px 56px 20px 22px}
+summary::after{font-size:2rem;top:14px}
+details p{font-size:1.2rem}
+label{font-size:1.2rem}
+input,select,textarea{font-size:1.2rem;padding:14px 16px}
+.note{font-size:1.1rem}
+.reach small{font-size:1.1rem}
+.reach a,.reach span{font-size:1.7rem}
+footer{font-size:1.1rem}
+header .p2r{font-size:2rem}
+
+/* Light header so the spider stands out */
+header{background:#fff8ea;border-bottom:2px solid #f5a623;box-shadow:0 4px 16px -8px rgba(10,22,40,.3)}
+header .p2r{color:var(--night)}
+header .two{color:#b86e00}
+.links a{color:var(--ink)}
+.links a:hover{color:#a8680a}
+.links .btn{color:var(--night)}
+.menu-btn{color:var(--night);border:2px solid #a8680a;background:#fff}
+@media (max-width:860px){.links{background:#fff8ea;border-bottom:2px solid #f5a623}.links a{border-bottom:1px solid rgba(10,22,40,.1)}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="p2r" href="#top" aria-label="Pest2Rest home"><span aria-hidden="true">Pest</span><span class="slot" aria-hidden="true"><b class="two">2</b><span class="spd"><svg viewBox="0 0 84 44"><g fill="none" stroke="#2a1608" stroke-width="2" stroke-linecap="round"><g class="lg pa"><path d="M21 18L13 9L4 11"/></g><g class="lg pb"><path d="M24 17L22 6L14 3"/></g><g class="lg pa"><path d="M27 17L31 7L39 5"/></g><g class="lg pb"><path d="M30 19L36 12L43 11"/></g><g class="lg pb"><path d="M21 27L13 35L4 33"/></g><g class="lg pa"><path d="M24 28L22 38L14 41"/></g><g class="lg pb"><path d="M27 27L31 37L39 39"/></g><g class="lg pa"><path d="M30 25L36 32L43 33"/></g></g><ellipse cx="50" cy="22" rx="16" ry="9.5" fill="#2d1b0e" stroke="#1f1208"/><ellipse cx="44" cy="19" rx="7" ry="3.5" fill="#6b4423" opacity=".5"/><ellipse cx="66" cy="22" rx="4.6" ry="4" fill="#f4f1ea"/><ellipse cx="22" cy="22" rx="7" ry="6.5" fill="#3b2614" stroke="#1f1208"/><circle cx="16.5" cy="19.5" r="1.1" fill="#c9a24a"/><circle cx="16.5" cy="24.5" r="1.1" fill="#c9a24a"/></svg></span><i class="flash"></i><i class="ring"></i></span><span aria-hidden="true">Rest</span></a>
+    <nav class="links" id="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#possums">Possums</a>
+      <a href="#safety">Safety</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-gold" href="#" data-tel>Call now</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-controls="nav" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+  <div class="promo" role="note"><div class="wrap"><span>Free inspection on your 2nd job</span><span>No outcall fees on your 3rd job once you buy a subscription</span></div></div>
+
+  <div class="hero">
+    <div class="wrap">
+      <h1>Professional bug, wasp, possum and rodent treatment for your home and business.</h1>
+      <p>From wasp nests and bees to white-tailed spiders, cockroaches, bed bugs, possums, mice and rats, tell us what you’re seeing and we’ll talk you through the right treatment.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#" data-tel>Call <span data-phone>…</span></a>
+        <a class="btn btn-ghost" href="#contact">Request a quote</a>
+      </div>
+      <div class="facts">
+        <div><b>Wasps, hornets and bees</b>Nests and swarms</div>
+        <div><b>Crawling bugs</b>Spiders, cockroaches, bed bugs, ants</div>
+        <div><b>Possums and rodents</b>Humane, lawful and rodent-proofing</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head"><h2>What we treat</h2><p>Choose the problem that matches yours and we’ll take it from there.</p></div>
+      <div class="grid">
+        <div class="card wide"><h3>Wasps and hornets</h3><p>Nests near doors, roofs, balconies and gardens are a real risk, especially to children and people with allergies. We deal with them so you don’t have to.</p><ul><li>Nest inspection and identification</li><li>Safe removal and treatment of the nest</li><li>Advice to help stop new nests forming</li></ul><div class="warn">Don’t try to remove a nest yourself. Keep children and pets away and call us.</div><p></p><a href="#contact" data-service="Wasps / hornets">Enquire about wasps</a></div>
+        <div class="card"><h3>Bees</h3><p>Swarms and hives in walls, roofs and gardens. We’ll advise on the safest option for you and the bees.</p><a href="#contact" data-service="Bees">Enquire</a></div>
+        <div class="card"><h3>White-tailed spiders</h3><p>Dark, glossy spiders with a pale tip on the rear of the abdomen. Treatment for sheds, woodpiles, bedding and wall cavities where they hide.</p><a href="#contact" data-service="Spiders / other bugs">Enquire</a></div>
+        <div class="card"><h3>Cockroaches</h3><p>Kitchens, bathrooms, drains and storerooms in homes, restaurants and offices.</p><a href="#contact" data-service="Cockroaches">Enquire</a></div>
+        <div class="card"><h3>Bed bugs</h3><p>Bedrooms, mattresses, furniture and the cracks where bed bugs hide.</p><a href="#contact" data-service="Bed bugs">Enquire</a></div>
+        <div class="card"><h3>Ants</h3><p>We find the trail and the nest so the ants are dealt with at the source.</p><a href="#contact" data-service="Ants">Enquire</a></div>
+        <div class="card"><h3>Mosquitoes and flies</h3><p>Treatment for indoor and outdoor areas where mosquitoes and flies gather.</p><a href="#contact" data-service="Mosquitoes / flies">Enquire</a></div>
+        <div class="card"><h3>Possums</h3><p>Possums in roof cavities, ceilings and sheds. See <a href="#possums">how we handle possums lawfully</a>.</p><a href="#contact" data-service="Possums">Enquire</a></div>
+        <div class="card"><h3>Rats and mice</h3><p>Rodents in roofs, walls, sheds and kitchens, dealt with by inspection, baiting and sealing entry points.</p><a href="#contact" data-service="Rats and mice">Enquire</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="alt">
+    <div class="wrap">
+      <div class="head"><h2>Pricing</h2><p>Starting prices. We confirm your exact quote after an inspection, before any work starts.</p></div>
+      <div class="two-col">
+        <div class="card"><h3>Possum management</h3><div class="price">from $240</div><p>Inspection, lawful exclusion of entry points and advice. Possum removal is only done by a licensed wildlife controller, and we tell you if that is needed.</p><a href="#contact" data-service="Possums">Get a quote</a></div>
+        <div class="card"><h3>Rodent treatment (mice and rats)</h3><div class="price">$280</div><p>Inspection, bait stations or traps where appropriate, and sealing of entry points to stop them returning.</p><a href="#contact" data-service="Rats and mice">Get a quote</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="possums" class="dark">
+    <div class="wrap">
+      <div class="head"><h2>How we handle possums, under Victorian law</h2><p>Possums are protected under the Wildlife Act 1975. It is illegal to harm them or interfere with them without authority, and relocating a possum is not permitted. Our work is built around that.</p></div>
+      <div class="grid">
+        <div class="card"><h3>1. Inspection</h3><p>We find out which possum it is, where it is getting in, and whether animals or young are inside before anything else happens.</p></div>
+        <div class="card"><h3>2. Lawful exclusion</h3><p>Once the roof space is clear, we seal entry points with durable mesh and metal flashing so possums can’t get back in. Work is timed around breeding and dependent young.</p></div>
+        <div class="card"><h3>3. Licensed referral</h3><p>If a possum is trapped inside, we don’t trap, harm or move it ourselves. We refer you to a licensed wildlife controller, and any lethal control needs an Authority to Control Wildlife from DEECA.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety">
+    <div class="wrap">
+      <div class="head"><h2>Safety and precautions</h2><p>Every treatment follows the product label and our safety procedures, so your family, pets and property stay protected.</p></div>
+      <div class="two-col">
+        <div class="card"><h3>While we treat</h3><ul><li>Products are used only as directed on the label, at the lowest effective rate</li><li>Protective equipment is worn for every job</li><li>Spraying is kept away from food preparation areas, water sources and play areas</li><li>Bait stations are locked or placed out of reach of children and pets</li><li>We warn occupants and keep areas closed off until treated surfaces are dry</li></ul></div>
+        <div class="card"><h3>After we leave</h3><ul><li>We tell you how long to keep kids and pets away and when to clean surfaces</li><li>Unused product and waste are taken away and disposed of as the label requires</li><li>We leave a written record of what was used and where</li><li>Follow-up visits are offered to check results</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="head"><h2>How we look after your property</h2><p>We treat your home or business as if it were ours.</p></div>
+      <div class="grid">
+        <div class="card"><h3>Before the job</h3><ul><li>Clear access to the problem area</li><li>Cover food, dishes and pet bowls</li><li>Move children and pets out for the treatment</li></ul></div>
+        <div class="card"><h3>During the job</h3><ul><li>Shoe covers on carpets and floors</li><li>Drop sheets under work areas</li><li>Mattresses and furniture are not moved without asking you first</li></ul></div>
+        <div class="card"><h3>When we finish</h3><ul><li>Area is left clean and tidy</li><li>Gaps and damage we caused are reported to you</li><li>We explain what to watch for</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="head"><h2>How it works</h2><p>Three simple steps, and no work starts until you’re happy.</p></div>
+      <div class="steps">
+        <div class="step"><b>1</b><h3>Tell us the problem</h3><p>Call, WhatsApp or use the form. Photos help us understand what we’re dealing with.</p></div>
+        <div class="step"><b>2</b><h3>We inspect and advise</h3><p>We confirm the pest, where it’s coming from and the right treatment for your property.</p></div>
+        <div class="step"><b>3</b><h3>Treatment is carried out</h3><p>We agree the quote and timing with you first, then carry out the treatment.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas" class="alt">
+    <div class="wrap">
+      <div class="head"><h2>Areas we cover</h2><p>We work mainly across Melbourne’s east, north-east and south-east. Not on the list? Call us and we’ll let you know.</p></div>
+      <div class="areas-grid">
+        <div class="areas"><h3>Eastern suburbs</h3><ul class="chips"><li>Hawthorn</li><li>Camberwell</li><li>Canterbury</li><li>Surrey Hills</li><li>Balwyn</li><li>Box Hill</li><li>Blackburn</li><li>Burwood</li><li>Doncaster</li><li>Templestowe</li><li>Nunawading</li><li>Mitcham</li><li>Vermont</li><li>Forest Hill</li><li>Ringwood</li><li>Glen Waverley</li><li>Mount Waverley</li><li>Croydon</li></ul></div>
+        <div class="areas"><h3>North-eastern suburbs</h3><ul class="chips"><li>Ivanhoe</li><li>Heidelberg</li><li>Rosanna</li><li>Macleod</li><li>Watsonia</li><li>Viewbank</li><li>Briar Hill</li><li>Eltham</li><li>Lower Plenty</li><li>Montmorency</li><li>Greensborough</li><li>Diamond Creek</li><li>Bundoora</li><li>Mill Park</li></ul></div>
+        <div class="areas"><h3>South-eastern suburbs</h3><ul class="chips"><li>Malvern East</li><li>Chadstone</li><li>Oakleigh</li><li>Clayton</li><li>Mulgrave</li><li>Wheelers Hill</li><li>Springvale</li><li>Noble Park</li><li>Dandenong</li><li>Keysborough</li><li>Bentleigh</li><li>Moorabbin</li><li>Cheltenham</li><li>Mentone</li><li>Narre Warren</li><li>Berwick</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap faq">
+      <div class="head"><h2>Frequently asked questions</h2><p>Can’t find your answer? Call or message us.</p></div>
+      <details open><summary>How much does a visit cost?</summary><p>Possum management starts from $240 and rodent treatment for mice and rats is $280. These are starting prices. We confirm the exact quote after inspection, before any work starts.</p></details>
+      <details><summary>Do you offer a free inspection?</summary><p>Yes. Your second job includes a free inspection, and you get no outcall fees on your third job once you buy a subscription.</p></details>
+      <details><summary>Can you remove a possum from my roof?</summary><p>Possums are protected under the Wildlife Act 1975 in Victoria. We don’t trap, harm or relocate them. We seal entry points so they can’t get back in, and if one is trapped inside we refer you to a licensed wildlife controller.</p></details>
+      <details><summary>Is it safe for my kids and pets?</summary><p>Yes, when we follow the label. We tell you how long to keep children and pets away from treated areas, lock bait stations and keep products away from food and water.</p></details>
+      <details><summary>Are white-tailed spiders dangerous?</summary><p>White-tailed spiders can give a painful bite that may swell or itch. Wash the bite, use a cold pack, and see a doctor if pain spreads, you feel unwell or you have a known allergy. Call 000 for severe reactions.</p></details>
+      <details><summary>How long does treatment take to work?</summary><p>Many pests start to decline within days, but some, like rodents and possums, can take longer. We schedule follow-up visits to check results.</p></details>
+      <details><summary>Are your treatments safe for the environment?</summary><p>We use products as directed on the label, use the lowest effective rate, and keep product away from water and wildlife where possible.</p></details>
+      <details><summary>Do I need to be home?</summary><p>It helps, so we can explain the work and check access. If you can’t be there, tell us in the enquiry form and we’ll discuss how to arrange it.</p></details>
+    </div>
+  </section>
+
+  <section id="contact" class="dark">
+    <div class="wrap contact-grid">
+      <div class="contact">
+        <h2>Get a free quote</h2>
+        <p>Call or message us, or send the form and it will open in WhatsApp.</p>
+        <div class="reach">
+          <div><small>Phone</small><a href="#" data-tel><span data-phone>…</span></a></div>
+          <div><small>WhatsApp</small><a href="#" data-wa target="_blank" rel="noopener">Message us</a></div>
+          <div><small>Email</small><a href="#" data-email>…</a></div>
+          <div><small>Service area</small><span data-city>…</span></div>
+        </div>
+      </div>
+      <form id="quoteForm">
+        <div class="field"><label for="name">Your name *</label><input id="name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field full"><label for="address">Address *</label><input id="address" name="address" autocomplete="street-address" required></div>
+        <div class="field full"><label for="service">What do you need help with? *</label>
+          <select id="service" name="service" required><option value="">Choose a service</option><option>Wasps / hornets</option><option>Bees</option><option>Spiders / other bugs</option><option>Cockroaches</option><option>Bed bugs</option><option>Ants</option><option>Mosquitoes / flies</option><option>Possums</option><option>Rats and mice</option><option>Not sure</option></select></div>
+        <div class="field full"><label for="message">Tell us a little more (optional)</label><textarea id="message" name="message"></textarea></div>
+        <button class="btn btn-gold" type="submit">Send on WhatsApp</button>
+        <p class="note">* Required. This opens WhatsApp with your message ready. Press send to finish.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div class="p2r" role="img" aria-label="Pest2Rest"><span aria-hidden="true">Pest</span><span class="slot" aria-hidden="true"><b class="two">2</b><span class="spd"><svg viewBox="0 0 84 44"><g fill="none" stroke="#2a1608" stroke-width="2" stroke-linecap="round"><g class="lg pa"><path d="M21 18L13 9L4 11"/></g><g class="lg pb"><path d="M24 17L22 6L14 3"/></g><g class="lg pa"><path d="M27 17L31 7L39 5"/></g><g class="lg pb"><path d="M30 19L36 12L43 11"/></g><g class="lg pb"><path d="M21 27L13 35L4 33"/></g><g class="lg pa"><path d="M24 28L22 38L14 41"/></g><g class="lg pb"><path d="M27 27L31 37L39 39"/></g><g class="lg pa"><path d="M30 25L36 32L43 33"/></g></g><ellipse cx="50" cy="22" rx="16" ry="9.5" fill="#2d1b0e" stroke="#1f1208"/><ellipse cx="66" cy="22" rx="4.6" ry="4" fill="#f4f1ea"/><ellipse cx="22" cy="22" rx="7" ry="6.5" fill="#3b2614" stroke="#1f1208"/></svg></span><i class="flash"></i><i class="ring"></i></span><span aria-hidden="true">Rest</span></div>
+    <span>© <span id="year"></span> Pest2Rest. Bug, wasp, bee, possum and rodent treatment.</span>
+  </div>
+</footer>
+
+<div class="callbar"><a class="btn btn-gold" href="#" data-tel>Call now</a><a class="btn btn-ghost" href="#" data-wa target="_blank" rel="noopener">WhatsApp</a></div>
+
+<script>
+/* EDIT THESE DETAILS */
+var CONFIG={
+  phoneDisplay:'+61 401 042 325',
+  phoneTel:'+61401042325',
+  whatsapp:'61401042325',
+  email:'info@pest2rest.com.au',
+  city:'Melbourne’s east, north-east and south-east'
+};
+document.getElementById('year').textContent=new Date().getFullYear();
+document.querySelectorAll('[data-phone]').forEach(function(e){e.textContent=CONFIG.phoneDisplay;});
+document.querySelectorAll('[data-tel]').forEach(function(e){e.href='tel:'+CONFIG.phoneTel;});
+document.querySelectorAll('[data-wa]').forEach(function(e){e.href='https://wa.me/'+CONFIG.whatsapp;});
+document.querySelectorAll('[data-email]').forEach(function(e){e.href='mailto:'+CONFIG.email;e.textContent=CONFIG.email;});
+document.querySelectorAll('[data-city]').forEach(function(e){e.textContent=CONFIG.city;});
+document.querySelectorAll('[data-service]').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('service').value=a.dataset.service;});
+});
+
+/* Mobile menu */
+var menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+menuBtn.addEventListener('click',function(){
+  var open=nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',open);
+  menuBtn.textContent=open?'Close':'Menu';
+});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='Menu';});});
+
+/* Enquiry form: required fields checked before sending */
+document.getElementById('quoteForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(this);
+  var val=function(k){return String(d.get(k)||'').trim();};
+  var required=[['name','Your name'],['phone','Phone number'],['address','Address'],['service','What do you need help with?']];
+  for(var i=0;i<required.length;i++){
+    if(!val(required[i][0])){
+      alert('Please fill in: '+required[i][1]);
+      document.getElementById(required[i][0]).focus();
+      return;
+    }
+  }
+  if(val('phone').replace(/\D/g,'').length<8){
+    alert('Please enter a valid phone number.');
+    document.getElementById('phone').focus();
+    return;
+  }
+  var text='Hello Pest2Rest, I would like a quote.\n\nName: '+val('name')+'\nPhone: '+val('phone')+'\nAddress: '+val('address')+'\nService: '+val('service')+'\nDetails: '+(val('message')||'Not provided');
+  window.open('https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(text),'_blank');
+});
+
+/* Animated 2 */
+var marks=document.querySelectorAll('.p2r'),reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function play(){marks.forEach(function(m){m.classList.remove('run');void m.offsetWidth;m.classList.add('run');});}
+if(!reduce){
+  (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(function(){play();setInterval(play,12500);});
+  marks.forEach(function(m){m.addEventListener('pointerenter',play);});
+}
+</script>
+</body>
+</html>

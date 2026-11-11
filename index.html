@@ -149,7 +149,7 @@ footer .p2r{font-size:1.4rem}
   form{grid-template-columns:1fr}
 }
 /* Larger text for easier reading */
-body{font-size:20px;line-height:1.7}
+body{font-size:1.25rem;line-height:1.7}
 .hero h1{font-size:clamp(2.5rem,5.5vw,3.8rem)}
 .hero p{font-size:1.3rem}
 .head h2,.contact h2{font-size:clamp(2.6rem,5.5vw,3.6rem)}
@@ -189,9 +189,29 @@ header .two{color:#b86e00}
 .links .btn{color:var(--night)}
 .menu-btn{color:var(--night);border:2px solid #a8680a;background:#fff}
 @media (max-width:860px){.links{background:#fff8ea;border-bottom:2px solid #f5a623}.links a{border-bottom:1px solid rgba(10,22,40,.1)}}
+.offer{display:inline-block;background:var(--gold);color:var(--night);font-weight:700;padding:10px 20px;border-radius:999px;font-size:1.2rem;margin-bottom:6px}
+.promo .catchy{font-family:var(--serif);font-style:italic;font-size:1.6rem;font-weight:400}
+.promo .blink{font-family:var(--serif);font-style:italic;font-size:1.6rem;font-weight:400;color:#7a3e00;animation:blink 1s steps(2,start) infinite}
+@keyframes blink{to{visibility:hidden}}
+@media (prefers-reduced-motion:reduce){.promo .blink{animation:none}}
+/* Accessibility refinements (research: 16px+ base, 4.5:1+ contrast, 44-48px touch targets, resizable text) */
+html.big body{font-size:1.55rem}
+.skip{position:absolute;left:-999px;top:0}
+.skip:focus{left:12px;top:12px;z-index:99;background:#fff;color:#000;padding:10px 16px;border-radius:8px}
+.card p,.head p,.step p,.areas p{color:#3d4758}
+.btn,.card>a{min-height:48px;display:inline-flex;align-items:center}
+summary{min-height:56px}
+.promo{background:var(--night);color:#fff;border-bottom:2px solid #f5a623}
+.promo .catchy{color:#fff}
+.promo .blink{color:#ffd27a;animation:glow 1.6s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:1;text-shadow:0 0 10px rgba(255,210,122,.9)}50%{opacity:.6;text-shadow:0 0 1px rgba(255,210,122,0)}}
+@media (prefers-reduced-motion:reduce){.promo .blink{animation:none}}
+.size-btn{background:#fff;color:var(--night);border:2px solid #a8680a;border-radius:999px;padding:10px 16px;font:inherit;font-weight:700;font-size:1.05rem;cursor:pointer;min-height:48px}
+@media (max-width:480px){.size-btn{font-size:.9rem;padding:8px 10px}}
 </style>
 </head>
 <body>
+<a class="skip" href="#services">Skip to main content</a>
 
 <header>
   <div class="wrap nav">
@@ -205,17 +225,18 @@ header .two{color:#b86e00}
       <a href="#contact">Contact</a>
       <a class="btn btn-gold" href="#" data-tel>Call now</a>
     </nav>
+    <button class="size-btn" id="sizeBtn" aria-pressed="false">Larger text</button>
     <button class="menu-btn" id="menuBtn" aria-controls="nav" aria-expanded="false">Menu</button>
   </div>
 </header>
 
 <main id="top">
-  <div class="promo" role="note"><div class="wrap"><span>Free inspection on your 2nd job</span><span>No outcall fees on your 3rd job once you buy a subscription</span></div></div>
+  <div class="promo" role="note"><div class="wrap"><span class="blink">Get a free quote on call or email</span><span class="catchy">Free inspection on your 2nd job</span></div></div>
 
   <div class="hero">
     <div class="wrap">
       <h1>Professional bug, wasp, possum and rodent treatment for your home and business.</h1>
-      <p>From wasp nests and bees to white-tailed spiders, cockroaches, bed bugs, possums, mice and rats, tell us what you’re seeing and we’ll talk you through the right treatment.</p>
+      <p>Wasps, spiders, cockroaches, bed bugs, possums and rodents. Tell us what you’re seeing and we’ll sort it fast, with a clear quote before any work starts.</p>
       <div class="cta">
         <a class="btn btn-gold" href="#" data-tel>Call <span data-phone>…</span></a>
         <a class="btn btn-ghost" href="#contact">Request a quote</a>
@@ -313,7 +334,7 @@ header .two{color:#b86e00}
     <div class="wrap faq">
       <div class="head"><h2>Frequently asked questions</h2><p>Can’t find your answer? Call or message us.</p></div>
       <details open><summary>How much does a visit cost?</summary><p>Possum management starts from $240 and rodent treatment for mice and rats is $280. These are starting prices. We confirm the exact quote after inspection, before any work starts.</p></details>
-      <details><summary>Do you offer a free inspection?</summary><p>Yes. Your second job includes a free inspection, and you get no outcall fees on your third job once you buy a subscription.</p></details>
+      <details><summary>Do you offer a free inspection?</summary><p>Yes. Your second job includes a free inspection.</p></details>
       <details><summary>Can you remove a possum from my roof?</summary><p>Possums are protected under the Wildlife Act 1975 in Victoria. We don’t trap, harm or relocate them. We seal entry points so they can’t get back in, and if one is trapped inside we refer you to a licensed wildlife controller.</p></details>
       <details><summary>Is it safe for my kids and pets?</summary><p>Yes, when we follow the label. We tell you how long to keep children and pets away from treated areas, lock bait stations and keep products away from food and water.</p></details>
       <details><summary>Are white-tailed spiders dangerous?</summary><p>White-tailed spiders can give a painful bite that may swell or itch. Wash the bite, use a cold pack, and see a doctor if pain spreads, you feel unwell or you have a known allergy. Call 000 for severe reactions.</p></details>
@@ -326,8 +347,8 @@ header .two{color:#b86e00}
   <section id="contact" class="dark">
     <div class="wrap contact-grid">
       <div class="contact">
-        <h2>Get a free quote</h2>
-        <p>Call or message us, or send the form and it will open in WhatsApp.</p>
+        <h2>Get a free quote on call or email</h2>
+        <p class="offer">Free inspection on your 2nd job</p>
         <div class="reach">
           <div><small>Phone</small><a href="#" data-tel><span data-phone>…</span></a></div>
           <div><small>WhatsApp</small><a href="#" data-wa target="_blank" rel="noopener">Message us</a></div>
@@ -376,6 +397,9 @@ document.querySelectorAll('[data-city]').forEach(function(e){e.textContent=CONFI
 document.querySelectorAll('[data-service]').forEach(function(a){
   a.addEventListener('click',function(){document.getElementById('service').value=a.dataset.service;});
 });
+
+var sizeBtn=document.getElementById('sizeBtn');
+sizeBtn.addEventListener('click',function(){var on=document.documentElement.classList.toggle('big');sizeBtn.setAttribute('aria-pressed',on);sizeBtn.textContent=on?'Normal text':'Larger text';});
 
 /* Mobile menu */
 var menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');

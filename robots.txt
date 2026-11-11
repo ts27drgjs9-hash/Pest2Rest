@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pest2rest.com.au/sitemap.xml

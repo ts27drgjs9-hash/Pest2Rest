@@ -8,9 +8,9 @@
 <meta name="theme-color" content="#0a1628">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://pest2rest.com.au/possum-control-melbourne.html">
-<!-- Google Ads tag. Replace AW-18565353268 with your Google Ads ID. -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18565353268"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","AW-18565353268");</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KN4QF7NJ');</script>
+<!-- End Google Tag Manager -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pest2Rest">
 <meta property="og:title" content="Possum Control Melbourne | Pest2Rest">
@@ -268,6 +268,7 @@ footer .p2r .spd{display:none}
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN4QF7NJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
 <a class="skip" href="#main">Skip to main content</a>
 <header>
   <div class="wrap nav">
@@ -372,21 +373,15 @@ footer .p2r .spd{display:none}
 <script>
 (function(){
 
-  // Google Ads conversions: call taps, WhatsApp taps and enquiries.
-  // Replace the placeholders below with your conversion labels from Google Ads.
-  var ADS_ID='AW-18565353268';
-  var LABELS={call:'CALL_CONVERSION_LABEL',whatsapp:'AM12CMqT-rsdELSe05RF',enquiry:'ENQUIRY_CONVERSION_LABEL'};
-  function conv(kind){
-    if(ADS_ID.indexOf('XXXX')!==-1||LABELS[kind].indexOf('_LABEL')!==-1) return; // not set up yet
-    if(typeof window.gtag!=='function') return;
-    window.gtag('event','conversion',{send_to:ADS_ID+'/'+LABELS[kind],transport_type:'beacon'});
-  }
+  // Phone call taps are sent to Google Tag Manager as a 'call_click' event.
   document.addEventListener('click',function(e){
     var a=e.target.closest?e.target.closest('a'):null;
-    if(!a) return; // the WhatsApp link after an enquiry is not counted twice
+    if(!a) return;
     var h=a.getAttribute('href')||'';
-    if(h.indexOf('tel:')===0) conv('call');
-    else if(h.indexOf('wa.me')!==-1) conv('whatsapp');
+    if(h.indexOf('tel:')===0){
+      window.dataLayer=window.dataLayer||[];
+      window.dataLayer.push({event:'call_click',page_path:location.pathname});
+    }
   });
   var C={phoneDisplay:'+61 401 042 325',phoneTel:'+61401042325',whatsapp:'61401042325'};
   function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s));}

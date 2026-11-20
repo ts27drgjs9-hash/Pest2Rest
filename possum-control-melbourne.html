@@ -8,6 +8,9 @@
 <meta name="theme-color" content="#0a1628">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://pest2rest.com.au/possum-control-melbourne.html">
+<!-- Google Ads tag. Replace AW-XXXXXXXXXX with your Google Ads ID. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","AW-XXXXXXXXXX");</script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pest2Rest">
 <meta property="og:title" content="Possum Control Melbourne | Pest2Rest">
@@ -368,6 +371,23 @@ footer .p2r .spd{display:none}
 </div>
 <script>
 (function(){
+
+  // Google Ads conversions: call taps, WhatsApp taps and enquiries.
+  // Replace the placeholders below with your conversion labels from Google Ads.
+  var ADS_ID='AW-XXXXXXXXXX';
+  var LABELS={call:'CALL_CONVERSION_LABEL',whatsapp:'WHATSAPP_CONVERSION_LABEL',enquiry:'ENQUIRY_CONVERSION_LABEL'};
+  function conv(kind){
+    if(ADS_ID.indexOf('XXXX')!==-1||LABELS[kind].indexOf('_LABEL')!==-1) return; // not set up yet
+    if(typeof window.gtag!=='function') return;
+    window.gtag('event','conversion',{send_to:ADS_ID+'/'+LABELS[kind],transport_type:'beacon'});
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('a'):null;
+    if(!a) return; // the WhatsApp link after an enquiry is not counted twice
+    var h=a.getAttribute('href')||'';
+    if(h.indexOf('tel:')===0) conv('call');
+    else if(h.indexOf('wa.me')!==-1) conv('whatsapp');
+  });
   var C={phoneDisplay:'+61 401 042 325',phoneTel:'+61401042325',whatsapp:'61401042325'};
   function $$(s){return Array.prototype.slice.call(document.querySelectorAll(s));}
   $$('[data-phone]').forEach(function(e){e.textContent=C.phoneDisplay;});

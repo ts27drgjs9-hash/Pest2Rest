@@ -611,6 +611,12 @@ body.svc-open{overflow:hidden}
   </div>
 </footer>
 
+<div class="svc-modal" id="svcModal" role="dialog" aria-modal="true" aria-label="Service details" hidden>
+  <div class="svc-sheet">
+    <button class="svc-x" type="button" id="svcClose" aria-label="Close">&times;</button>
+    <iframe id="svcFrame" title="Service details"></iframe>
+  </div>
+</div>
 <div class="callbar">
   <a class="btn btn-gold" href="#" data-tel>Call now</a>
   <a class="btn btn-ghost" href="#" data-wa target="_blank" rel="noopener">WhatsApp</a>
@@ -767,11 +773,5 @@ body.svc-open{overflow:hidden}
   }
 })();
 </script>
-<div class="svc-modal" id="svcModal" role="dialog" aria-modal="true" aria-label="Service details" hidden>
-  <div class="svc-sheet">
-    <button class="svc-x" type="button" id="svcClose" aria-label="Close">&times;</button>
-    <iframe id="svcFrame" title="Service details"></iframe>
-  </div>
-</div>
 </body>
 </html>

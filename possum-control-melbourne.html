@@ -21,7 +21,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="https://pest2rest.com.au/pest2rest-apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Possum management","provider":{"@type":"LocalBusiness","name":"Pest2Rest","telephone":"+61401042325","email":"info@pest2rest.com.au","url":"https://pest2rest.com.au/","logo":"https://pest2rest.com.au/pest2rest-logo.png"},"areaServed":"Melbourne east, north-east and south-east","description":"Possum control in Melbourne\u2019s east, north-east and south-east. Lawful inspection, entry point sealing and licensed referral. Quotes from $240, 12-month warranty."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does possum control cost?", "acceptedAnswer": {"@type": "Answer", "text": "Possum management starts from $240. We confirm your exact quote in writing after inspection, before any work starts."}}, {"@type": "Question", "name": "Can you remove a possum from my roof?", "acceptedAnswer": {"@type": "Answer", "text": "We don’t trap, harm or relocate possums ourselves, because they are protected under Victorian law. If a possum needs to be removed, we refer you to a licensed wildlife controller and seal the entry points so it can’t return."}}, {"@type": "Question", "name": "Is it legal to move a possum?", "acceptedAnswer": {"@type": "Answer", "text": "Moving a possum to a new location is generally not permitted under the Wildlife Act 1975 in Victoria. Check current requirements with DEECA before taking any action."}}, {"@type": "Question", "name": "How long does possum sealing take?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the size of the roof and how many entry points there are. We confirm timing when we quote."}}, {"@type": "Question", "name": "Do you check for babies before sealing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We check for young before sealing so dependent animals aren’t trapped inside."}}]}</script>
 <style>
@@ -29,8 +29,8 @@
   --night:#0a1628;--night-2:#12233f;--amber:#f5a623;--amber-dk:#a8680a;--amber-lt:#ffd27a;
   --ivory:#f4f1ea;--white:#fff;--ink:#101a2b;--body:#3d4758;--sage:#b9c6dc;
   --gold:linear-gradient(135deg,#ffd27a,#f5a623 55%,#d98a0f);
-  --serif:"Fraunces",Georgia,serif;
-  --sans:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --gutter:clamp(20px,4vw,40px);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -41,7 +41,7 @@ a{color:inherit}
 img,svg{max-width:100%}
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px}
 .wrap{width:min(1160px,100% - var(--gutter) * 2);margin-inline:auto}
-h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.08;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.1;letter-spacing:-.03em}
 section{padding:64px 0;scroll-margin-top:84px}
 .skip{position:absolute;left:-999px;top:0}
 .skip:focus{left:12px;top:12px;z-index:99;background:#fff;color:#000;padding:10px 16px;border-radius:8px}
@@ -89,7 +89,7 @@ header{position:fixed;inset:0 0 auto 0;z-index:40;background:#fff8ea;border-bott
 /* Promo bar */
 .promo{background:var(--gold);color:var(--night);margin-top:68px;padding:12px 0;text-align:center;font-weight:700;font-size:1rem}
 .promo .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px}
-.promo .catchy{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.5rem;color:var(--night)}
+.promo .catchy{font-family:var(--serif);font-style:normal;font-weight:400;font-size:1.5rem;color:var(--night)}
 .promo .blink{color:#4a2a00;animation:glow 1.6s ease-in-out infinite}
 @keyframes glow{0%,100%{opacity:1}50%{opacity:.6}}
 
@@ -239,6 +239,17 @@ footer .p2r .spd{display:none}
   *{animation:none!important;transition:none!important}
 }
 
+/* Service pop-up */
+.svc-modal{position:fixed;inset:0;z-index:100;background:rgba(6,15,29,.72);display:flex;align-items:center;justify-content:center;padding:24px}
+.svc-modal[hidden]{display:none}
+.svc-sheet{position:relative;width:min(980px,100%);height:min(88vh,920px);background:var(--ivory);border-radius:20px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
+.svc-sheet iframe{width:100%;height:100%;border:0;display:block;background:var(--ivory)}
+.svc-x{position:absolute;top:12px;right:12px;z-index:2;width:44px;height:44px;border-radius:50%;border:0;background:var(--night);color:#fff;font-size:28px;line-height:1;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.35);font-family:inherit}
+.svc-x:hover{background:#1c3154}
+.svc-x:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+body.svc-open{overflow:hidden}
+@media (max-width:600px){.svc-modal{padding:0}.svc-sheet{width:100%;height:100%;border-radius:0}}
+
 
 .pic{margin:22px 0}
 .pic img{width:100%;height:auto;border-radius:16px;display:block;box-shadow:0 14px 30px -20px rgba(10,22,40,.5)}
@@ -267,10 +278,22 @@ footer .p2r .spd{display:none}
 .related a{background:#fff;border-radius:16px;padding:20px;text-decoration:none;color:var(--ink);font-weight:700;border-top:3px solid var(--amber)}
 .related a span{display:block;font-weight:400;color:var(--body);font-size:.98rem;margin-top:6px}
 @media (max-width:860px){.related{grid-template-columns:1fr}}
+
+
+/* Close button and embedded (pop-up) view */
+.pg-close{position:fixed;top:14px;right:14px;z-index:60;width:44px;height:44px;border-radius:50%;border:0;background:var(--night);color:#fff;font-size:28px;line-height:1;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.35);font-family:inherit}
+.pg-close:hover{background:#1c3154}
+.pg-close:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.embed header,.embed .callbar,.embed footer{display:none!important}
+.embed body{padding-bottom:0}
+.embed .pg-hero{padding-top:72px}
+.embed .pg-close{display:flex}
+
 </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN4QF7NJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
+<button class="pg-close" type="button" id="pgClose" aria-label="Close">&times;</button>
 <a class="skip" href="#main">Skip to main content</a>
 <header>
   <div class="wrap nav">
@@ -374,6 +397,28 @@ footer .p2r .spd{display:none}
 </div>
 <script>
 (function(){
+
+  // Pop-up mode: when this page is shown inside the homepage panel
+  var inEmbed=window.self!==window.top;
+  if(inEmbed){ document.documentElement.classList.add('embed'); }
+  var pgClose=document.getElementById('pgClose');
+  if(pgClose){
+    pgClose.addEventListener('click',function(){
+      if(inEmbed){ parent.postMessage({type:'close'},location.origin); }
+      else { location.href='index.html'; }
+    });
+  }
+  if(inEmbed){
+    document.addEventListener('click',function(e){
+      var a=e.target.closest?e.target.closest('a[href]'):null;
+      if(!a) return;
+      var h=a.getAttribute('href')||'';
+      if(h==='index.html' || h.indexOf('index.html#')===0){
+        e.preventDefault();
+        parent.postMessage({type:'go',href:h},location.origin);
+      }
+    });
+  }
 
   // Phone call taps are sent to Google Tag Manager as a 'call_click' event.
   document.addEventListener('click',function(e){

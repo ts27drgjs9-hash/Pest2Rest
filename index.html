@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pest2Rest | Pest Control Melbourne</title>
-<meta name="description" content="Licensed pest control in Melbourne with 3.5 years’ experience and over 5,000 clients helped. Wasps, bees, possums, rats and mice, spiders and more. Quotes confirmed before work starts.">
+<meta name="description" content="Licensed pest control in Melbourne with 3.5 years’ experience and over 3,000 clients helped. Wasps, bees, possums, rats and mice, spiders and more. Quotes confirmed before work starts.">
 <meta name="theme-color" content="#111111">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://pest2rest.com.au/">
@@ -96,6 +96,7 @@ section{padding:88px 0;scroll-margin-top:84px}
 header{position:fixed;inset:0 0 auto 0;z-index:40;background:#fff;border-bottom:3px solid #ffd21f;color:#111}
 .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
 .p2r{color:#e10600;overflow:hidden}
+header .p2r{background:#f0f0f0;border-radius:12px;padding:8px 14px 6px;margin-left:-6px}
 .p2r .slot .two{color:var(--amber)}
 .links{display:flex;align-items:center;gap:28px}
 .links a{color:#111;text-decoration:none;font-size:.95rem;font-weight:700}
@@ -124,15 +125,14 @@ header{position:fixed;inset:0 0 auto 0;z-index:40;background:#fff;border-bottom:
 
 
 /* Gold seal badges */
-.trust{background:#111;padding:64px 0}
-.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:34px 40px}
-.badge{position:relative;width:190px;height:190px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#2b1d00;background:radial-gradient(circle at 32% 26%,#fffbe0 0%,#ffe27a 22%,#f2b824 52%,#b07d12 82%,#7a5300 100%);box-shadow:inset 0 0 0 7px #8a5f00,inset 0 0 0 10px #ffe680,inset 0 0 0 13px #b07d12,0 14px 30px rgba(0,0,0,.45),0 0 0 4px #111}
+.trust{background:#fff;padding:40px 0}
+.badges{display:flex;justify-content:center;flex-wrap:nowrap;gap:14px}
+.badge{position:relative;width:clamp(72px,22vw,120px);height:clamp(72px,22vw,120px);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#2b1d00;background:radial-gradient(circle at 32% 26%,#fffbe0 0%,#ffe27a 22%,#f2b824 52%,#b07d12 82%,#7a5300 100%);box-shadow:inset 0 0 0 7px #8a5f00,inset 0 0 0 10px #ffe680,inset 0 0 0 13px #b07d12,0 8px 18px rgba(0,0,0,.18),0 0 0 3px #fff}
 .badge::before{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(120deg,rgba(255,255,255,.8) 0%,rgba(255,255,255,0) 34%,rgba(255,255,255,0) 66%,rgba(255,255,255,.4) 100%);pointer-events:none}
-.badge::after{content:"";position:absolute;inset:20px;border-radius:50%;border:2px dashed rgba(90,60,0,.6)}
-.badge b{position:relative;z-index:1;font-size:2.2rem;font-weight:800;letter-spacing:-.02em;line-height:1;color:#2b1d00}
-.badge b.sm{font-size:1.55rem}
-.badge span{position:relative;z-index:1;margin-top:8px;font-size:.8rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#2b1d00;max-width:10ch;line-height:1.25}
-@media (max-width:700px){.badge{width:160px;height:160px}.badge b{font-size:1.8rem}.badges{gap:26px 22px}}
+.badge::after{content:"";position:absolute;inset:11px;border-radius:50%;border:2px dashed rgba(90,60,0,.6)}
+.badge b{position:relative;z-index:1;font-size:clamp(.85rem,3.2vw,1.6rem);font-weight:800;letter-spacing:-.02em;line-height:1;color:#2b1d00}
+.badge b.sm{font-size:clamp(.7rem,2.6vw,1.05rem)}
+.badge span{position:relative;z-index:1;margin-top:4px;font-size:clamp(.45rem,1.8vw,.6rem);font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#2b1d00;max-width:9ch;line-height:1.2}
 
 /* Same-day banner */
 .offer-bar{background:#e10600;color:#fff;text-align:center;padding:16px var(--gutter);font-weight:700;font-size:1rem}
@@ -206,12 +206,7 @@ details[open] summary::after{content:"–"}
 details p{padding:0 24px 20px;color:var(--body);font-size:1.05rem}
 
 /* Contact */
-.contact-grid{display:grid;grid-template-columns:5fr 6fr;gap:56px;align-items:start}
-.contact-card{background:var(--navy);border-radius:24px;padding:40px;color:#fff}
-.contact-card h2{color:#fff;margin-bottom:12px}
-.contact-card p{color:#c3cfe3}
-.reach{display:grid;gap:18px;margin-top:28px}
-.reach div{border-top:1px solid rgba(255,255,255,.14);padding-top:14px}
+.contact-grid{display:grid;grid-template-columns:1fr;gap:56px;max-width:760px;margin:0 auto;align-items:start}
 .reach small{display:block;color:#b8c4da;font-size:.9rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
 .reach a,.reach span{font-size:1.4rem;font-weight:800;text-decoration:none;color:#fff;word-break:break-word;letter-spacing:-.01em}
 .reach a:hover{color:var(--amber)}
@@ -268,6 +263,11 @@ body.svc-open{overflow:hidden}
 .p2r .slot .two{color:#1a9e3a!important;font-size:1.6em;font-weight:800}
 footer .p2r{color:#e10600}
 footer .p2r .two{color:#1a9e3a!important}
+.slot .hat{position:absolute;left:-.04em;top:-.06em;width:.8em;height:auto;transform:rotate(-14deg);pointer-events:none;z-index:2;overflow:visible}
+.xmas-sale{flex:1;text-align:center;color:#e10600;font-weight:800;font-size:1rem;line-height:1.15;animation:xmasFlash 1s steps(1,end) infinite}
+@keyframes xmasFlash{0%,49%{opacity:1}50%,100%{opacity:.15}}
+@media (prefers-reduced-motion:reduce){.xmas-sale{animation:none}}
+@media (max-width:700px){.xmas-sale{font-size:.8rem}}
 #identify.redsec{background:#a8141c;color:#fff}
 #identify.redsec .eyebrow{color:#ffd9d6}
 #identify.redsec h2{color:#fff}
@@ -295,7 +295,6 @@ footer .p2r .two{color:#1a9e3a!important}
   .hero .cta .btn{min-width:0;width:100%}
   .hero .cta{flex-direction:column}
   form{grid-template-columns:1fr;padding:24px}
-  .contact-card{padding:28px}
   .svc-modal{padding:0}.svc-sheet{width:100%;height:100%;border-radius:0}
   .p2r{font-size:1.7rem}
 }
@@ -311,7 +310,8 @@ footer .p2r .two{color:#1a9e3a!important}
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN4QF7NJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
 <header>
   <div class="wrap nav">
-    <a class="p2r" href="index.html" aria-label="Pest2Rest home"><span aria-hidden="true">Pest</span><span class="slot" aria-hidden="true"><b class="two">2</b><span class="spd"><svg viewBox="0 0 84 44"><g fill="none" stroke="#2a1608" stroke-width="2" stroke-linecap="round"><g class="lg pa"><path d="M21 18L13 9L4 11"/></g><g class="lg pb"><path d="M24 17L22 6L14 3"/></g><g class="lg pa"><path d="M27 17L31 7L39 5"/></g><g class="lg pb"><path d="M30 19L36 12L43 11"/></g><g class="lg pb"><path d="M21 27L13 35L4 33"/></g><g class="lg pa"><path d="M24 28L22 38L14 41"/></g><g class="lg pb"><path d="M27 27L31 37L39 39"/></g><g class="lg pa"><path d="M30 25L36 32L43 33"/></g></g><ellipse cx="50" cy="22" rx="16" ry="9.5" fill="#2d1b0e" stroke="#1f1208"/><ellipse cx="44" cy="19" rx="7" ry="3.5" fill="#6b4423" opacity=".5"/><ellipse cx="66" cy="22" rx="4.6" ry="4" fill="#f4f1ea"/><ellipse cx="22" cy="22" rx="7" ry="6.5" fill="#3b2614" stroke="#1f1208"/><circle cx="16.5" cy="19.5" r="1.1" fill="#c9a24a"/><circle cx="16.5" cy="24.5" r="1.1" fill="#c9a24a"/></svg></span><i class="flash"></i><i class="ring"></i></span><span aria-hidden="true">Rest</span></a>
+    <a class="p2r" href="index.html" aria-label="Pest2Rest home"><span aria-hidden="true">Pest</span><span class="slot" aria-hidden="true"><b class="two">2</b><svg class="hat" viewBox="0 0 40 30" aria-hidden="true" focusable="false"><path d="M5 25Q13 5 33 3Q29 14 35 25Z" fill="#e10600"/><rect x="2" y="22" width="36" height="6" rx="3" fill="#fff"/><circle cx="34" cy="4" r="4.5" fill="#fff"/></svg><span class="spd"><svg viewBox="0 0 84 44"><g fill="none" stroke="#2a1608" stroke-width="2" stroke-linecap="round"><g class="lg pa"><path d="M21 18L13 9L4 11"/></g><g class="lg pb"><path d="M24 17L22 6L14 3"/></g><g class="lg pa"><path d="M27 17L31 7L39 5"/></g><g class="lg pb"><path d="M30 19L36 12L43 11"/></g><g class="lg pb"><path d="M21 27L13 35L4 33"/></g><g class="lg pa"><path d="M24 28L22 38L14 41"/></g><g class="lg pb"><path d="M27 27L31 37L39 39"/></g><g class="lg pa"><path d="M30 25L36 32L43 33"/></g></g><ellipse cx="50" cy="22" rx="16" ry="9.5" fill="#2d1b0e" stroke="#1f1208"/><ellipse cx="44" cy="19" rx="7" ry="3.5" fill="#6b4423" opacity=".5"/><ellipse cx="66" cy="22" rx="4.6" ry="4" fill="#f4f1ea"/><ellipse cx="22" cy="22" rx="7" ry="6.5" fill="#3b2614" stroke="#1f1208"/><circle cx="16.5" cy="19.5" r="1.1" fill="#c9a24a"/><circle cx="16.5" cy="24.5" r="1.1" fill="#c9a24a"/></svg></span><i class="flash"></i><i class="ring"></i></span><span aria-hidden="true">Rest</span></a>
+    <span class="xmas-sale">10% Christmas sale</span>
     <nav class="links" id="nav" aria-label="Main">
       <a href="#services">Services</a>
       <a href="#identify">Wasp or bee?</a>
@@ -330,7 +330,7 @@ footer .p2r .two{color:#1a9e3a!important}
     <div>
       <span class="eyebrow">Licensed pest control · Melbourne</span>
       <h1>Pest control that <em>actually</em> solves the problem.</h1>
-      <p class="lead">Wasps, bees, possums, rats and mice, spiders, cockroaches and ants. Three and a half years in the field and over 5,000 clients helped across Melbourne. You get a clear quote before any work starts.</p>
+      <p class="lead">Wasps, bees, possums, rats and mice, spiders, cockroaches and ants. Three and a half years in the field and over 3,000 clients helped across Melbourne. You get a clear quote before any work starts.</p>
       <div class="cta">
         <a class="btn btn-gold" href="#" data-tel>Call <span data-phone>…</span></a>
         <a class="btn btn-ghost" href="#contact">Request a quote</a>
@@ -347,30 +347,10 @@ footer .p2r .two{color:#1a9e3a!important}
 
 <div class="offer-bar">Same day offer: <strong>$60 off</strong> same day general pest control</div>
 
-<div class="trust" aria-label="Why choose Pest2Rest">
-  <div class="wrap badges">
-    <div class="badge"><b>3.5</b><span>Years experience</span></div>
-    <div class="badge"><b>5,000+</b><span>Clients helped</span></div>
-    <div class="badge"><b class="sm">Licensed</b><span>Pest control</span></div>
-    <div class="badge"><b>12</b><span>Months warranty</span></div>
-  </div>
-</div>
-
 <section id="contact" class="alt" style="background:var(--paper);padding-top:40px">
   <div class="wrap contact-grid">
-    <div class="contact-card">
-      <span class="offer-pill">Same day offer: $60 off</span>
-      <h2>Get a quote by phone, WhatsApp or email</h2>
-      <p>Tell us what you have seen and we will come back to you with what it is and what it will cost.</p>
-      <div class="reach">
-        <div><small>Phone</small><a href="#" data-tel><span data-phone>…</span></a></div>
-        <div><small>WhatsApp</small><a href="#" data-wa target="_blank" rel="noopener">Message us on WhatsApp</a></div>
-        <div><small>Email</small><a href="#" data-email>…</a></div>
-        <div><small>Service area</small><span data-city>…</span></div>
-      </div>
-    </div>
-
     <form id="quoteForm" novalidate>
+      <h2 class="form-title">Request a quote</h2>
       <div class="field">
         <label for="name">Your name <span aria-hidden="true">*</span></label>
         <input id="name" name="name" autocomplete="name" required aria-describedby="name-err">
@@ -408,12 +388,21 @@ footer .p2r .two{color:#1a9e3a!important}
         <label for="message">Tell us a little more (optional)</label>
         <textarea id="message" name="message" placeholder="Where you have seen it, how long it has been there, and any photos you can send on WhatsApp"></textarea>
       </div>
-      <button class="btn btn-gold" type="submit">Open WhatsApp with my details</button>
+      <button class="btn btn-gold" type="submit">Email my enquiry</button>
       <div class="status" id="status" role="status" aria-live="polite"></div>
-      <p class="note">* Required. Pressing the button opens WhatsApp with your message ready. Your enquiry is only sent once you press send in WhatsApp. We use your details only to respond to your enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
+      <p class="note">* Required. Pressing the button opens your email app with your enquiry ready. Your enquiry is only sent once you press send in your email app. We use your details only to respond to your enquiry. See our <a href="privacy.html">privacy policy</a>.</p>
     </form>
   </div>
 </section>
+
+<div class="trust" aria-label="Why choose Pest2Rest">
+  <div class="wrap badges">
+    <div class="badge"><b>3.5</b><span>Years experience</span></div>
+    <div class="badge"><b>3,000+</b><span>Clients helped</span></div>
+    <div class="badge"><b class="sm">Licensed</b><span>Pest control</span></div>
+    <div class="badge"><b>12</b><span>Months warranty</span></div>
+  </div>
+</div>
 
 <section id="services">
   <div class="wrap">
@@ -606,7 +595,7 @@ footer .p2r .two{color:#1a9e3a!important}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="p2r" role="img" aria-label="Pest2Rest"><span aria-hidden="true">Pest</span><span class="slot" aria-hidden="true"><b class="two">2</b></span><span aria-hidden="true">Rest</span></div>
+        <div class="p2r" role="img" aria-label="Pest2Rest"><span aria-hidden="true">Pest</span><span class="slot" aria-hidden="true"><b class="two">2</b><svg class="hat" viewBox="0 0 40 30" aria-hidden="true" focusable="false"><path d="M5 25Q13 5 33 3Q29 14 35 25Z" fill="#e10600"/><rect x="2" y="22" width="36" height="6" rx="3" fill="#fff"/><circle cx="34" cy="4" r="4.5" fill="#fff"/></svg></span><span aria-hidden="true">Rest</span></div>
         <p style="margin-top:16px;max-width:38ch">Licensed pest control across Melbourne’s east, north-east and south-east.</p>
       </div>
       <div>
@@ -696,7 +685,7 @@ footer .p2r .two{color:#1a9e3a!important}
     if(e.data.type==='go'){closeSvc();location.href=e.data.href;}
   });
 
-  // Enquiry form: validation, then open WhatsApp (never claims it was sent)
+  // Enquiry form: validation, then open the email app (never claims it was sent)
   var form=$('#quoteForm'),status=$('#status');
   var rules={
     name:{label:'your name',test:function(v){return v.length>=2;}},
@@ -722,19 +711,11 @@ footer .p2r .two{color:#1a9e3a!important}
     if(!allOk){status.classList.remove('show');form.elements[firstBad].focus();return;}
     var v=function(k){return form.elements[k].value.trim();};
     var msg='Hello Pest2Rest, I would like a quote.\n\nName: '+v('name')+'\nPhone: '+v('phone')+'\nSuburb/address: '+v('address')+'\nService: '+v('service')+'\nDetails: '+(form.elements.message.value.trim()||'Not provided');
-    var url='https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(msg);
-    var win=window.open(url,'_blank');
-    if(win){try{win.opener=null;}catch(err){}}
+    var url='mailto:'+CONFIG.email+'?subject='+encodeURIComponent('Quote request from website')+'&body='+encodeURIComponent(msg);
     status.innerHTML='';
-    if(win){
-      status.appendChild(document.createTextNode('WhatsApp has opened with your message ready. Press send there to complete your enquiry.'));
-    } else {
-      status.appendChild(document.createTextNode('Your browser blocked the new window. '));
-      var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.textContent='Tap here to open WhatsApp with your message';
-      status.appendChild(a);
-      status.appendChild(document.createTextNode('.'));
-    }
+    status.appendChild(document.createTextNode('Your email app should open with your enquiry ready. Press send there to complete it. If nothing opens, email '+CONFIG.email+' directly.'));
     status.classList.add('show');
+    window.location.href=url;
   });
 
   // Animated logo: plays on load and on hover, unless reduced motion is on
